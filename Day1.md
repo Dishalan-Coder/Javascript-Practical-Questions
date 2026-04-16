@@ -5,11 +5,6 @@
 1. Write a single line comment which says, _comments can make code readable_
 2. Write another single comment which says, _Welcome to learn Javascript_
 3. Write a multiline comment which says, _comments can make code readable, easy to reuse_
-<<<<<<< HEAD
- _and informative_
-=======
-   _and informative_
->>>>>>> 0f3aba2f6c419ed692eed0059e237ebd5324dd7a
 4. Create a variable.js file and declare variables and assign string, boolean, undefined and null data types
 5. Create datatypes.js file and use the JavaScript **_typeof_** operator to check different data types. Check the data type of each variable
 6. Declare four variables without assigning values
