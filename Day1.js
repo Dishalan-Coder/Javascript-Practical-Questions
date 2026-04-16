@@ -62,9 +62,9 @@ console.log(challenge.toLowerCase());
 console.log(challenge.substr(0, 5)); // or substring(0, 5)
 
 // 7.
-let Challenge = '30 Days Of JavaScript';
+let challenge = '30 Days Of JavaScript';
 
-let phrase = Challenge.substring(11);
+let phrase = challenge.substring(11);
 
 console.log("learn",phrase);
 
