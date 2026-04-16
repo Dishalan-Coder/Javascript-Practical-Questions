@@ -3,16 +3,74 @@
 ### Exercises: Level 1
 
 1. Write a single line comment which says, _comments can make code readable_
+```js
+// comments can make code readable
+```
 2. Write another single comment which says, _Welcome to learn Javascript_
+```js
+// Welcome to learn Javascript
+```
 3. Write a multiline comment which says, _comments can make code readable, easy to reuse_
+```js
+/*Comments can make code readable,
+    easy to reuse 
+    and informative*/
+```
 4. Create a variable.js file and declare variables and assign string, boolean, undefined and null data types
+```js
+let myString = "Hello World";
+let myBoolean = true;
+let myUndefined;
+let myNull = null;
+```
 5. Create datatypes.js file and use the JavaScript **_typeof_** operator to check different data types. Check the data type of each variable
-6. Declare four variables without assigning values
-7. Declare four variables with assigned values
-8. Declare variables to store your first name, last name, marital status, country and age in multiple lines
-9. Declare variables to store your first name, last name, marital status, country and age in a single line
-10. Declare two variables _myAge_ and _yourAge_ and assign them initial values and log to the browser console.
+```js
+// Variables
+let myString = "Hello World";
+let myBoolean = true;
+let myUndefined;
+let myNull = null;
 
+// Checking data types
+console.log(typeof myString);     // string
+console.log(typeof myBoolean);    // boolean
+console.log(typeof myUndefined);  // undefined
+console.log(typeof myNull);       // object (this is a known JS behavior)
+```
+6. Declare four variables without assigning values
+```js
+let a;
+let b;
+let c;
+let d;
+```
+7. Declare four variables with assigned values
+```js
+let num = 10;
+let name = "Dishalan";
+let isStudent = true;
+let city = "Negombo";
+```
+8. Declare variables to store your first name, last name, marital status, country and age in multiple lines
+```js
+let firstName = "Jeyachchanthiran";
+let lastName = "Dishalan";
+let maritalStatus = "Single";
+let country = "Sri Lanka";
+let age = 21;
+```
+9. Declare variables to store your first name, last name, marital status, country and age in a single line
+```js
+let firstName = "Jeyachchanthiran", lastName = "Dishalan", maritalStatus = "Single", country = "Sri Lanka", age = 21;
+```
+10. Declare two variables _myAge_ and _yourAge_ and assign them initial values and log to the browser console.
+```js
+let myAge = 21;
+let yourAge = 25;
+
+console.log("I am ", myAge,"years old. ");
+console.log("Your are ", yourAge, "years old.");
+```
 ```sh
 I am 25 years old.
 You are 30 years old.
@@ -22,15 +80,49 @@ You are 30 years old.
 ### Exercises: Level 2
 
 1. Declare a variable named challenge and assign it to an initial value **'learn Javascript'**.
+```js
+let challenge = 'learn Javascript';
+```
 2. Print the string on the browser console using __console.log()__
+```js
+console.log(challenge);
+```
 3. Print the __length__ of the string on the browser console using _console.log()_
+```js
+console.log(challenge.length);
+```
 4. Change all the string characters to capital letters using __toUpperCase()__ method
+```js
+console.log(challenge.toUpperCase());
+```
 5. Change all the string characters to lowercase letters using __toLowerCase()__ method
+```js
+console.log(challenge.toLowerCase());
+```
 6. Cut (slice) out the first word of the string using __substr()__ or __substring()__ method
+```js
+console.log(challenge.substr(0, 5)); // or substring(0, 5)
+```
 7. Slice out the phrase *Days Of JavaScript* from *learn Javascript*.
+```js
+let challenge = '30 Days Of JavaScript';
+
+let phrase = challenge.substring(11);
+
+console.log("learn",phrase);
+```
 8. Check if the string contains a word __Script__ using __includes()__ method
+```js
+console.log(challenge.includes('Script'));
+```
 9. Split the __string__ into an __array__ using __split()__ method
+```js
+console.log(challenge.split());
+```
 10. Split the string learn Javascript at the space using __split()__ method
+```js
+console.log(challenge.split(' '));
+```
 11. 'Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon' __split__ the string at the comma and change it to an array.
 12. Change learn Javascript to 30 Days Of Python using __replace()__ method.
 13. What is character at index 15 in 'learn Javascript' string? Use __charAt()__ method.
