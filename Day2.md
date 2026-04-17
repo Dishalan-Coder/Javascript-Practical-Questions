@@ -262,6 +262,21 @@ console.log(parseInt('9.8') == 10); // false (parseInt('9.8') = 9)
    Enter height: 10
    The area of the triangle is 100
    ```
+   ```js
+   // Prompt user input
+   let base = prompt("Enter base:");
+   let height = prompt("Enter height:");
+
+   // Convert inputs to numbers
+   base = Number(base);
+   height = Number(height);
+
+   // Calculate area
+   let area = 0.5 * base * height;
+
+   // Display result
+   console.log(area);
+   ```
 
 1. Write a script that prompt the user to enter side a, side b, and side c of the triangle and and calculate the perimeter of triangle (perimeter = a + b + c)
 
@@ -271,8 +286,42 @@ console.log(parseInt('9.8') == 10); // false (parseInt('9.8') = 9)
    Enter side c: 3
    The perimeter of the triangle is 12
    ```
+   ```js
+   // Prompt user input
+   let a = prompt("Enter side a:");
+   let b = prompt("Enter side b:");
+   let c = prompt("Enter side c:");
+
+   // Convert inputs to numbers
+   a = Number(a);
+   b = Number(b);
+   c = Number(c);
+
+   // Calculate perimeter
+   let perimeter = a + b + c;
+
+   // Display result
+   console.log(perimeter);
+
+   ```
 
 1. Get length and width using prompt and calculate an area of rectangle (area = length x width and the perimeter of rectangle (perimeter = 2 x (length + width))
+```js
+let length = prompt("Enter length:");
+let width = prompt("Enter width:");
+
+// Convert inputs to numbers
+length = Number(length);
+width = Number(width);
+
+// Calculate area and perimeter
+let area = length * width;
+let perimeter = 2 * (length + width);
+
+// Display results
+console.log("Area = " + area);
+console.log("Perimeter = " + perimeter);
+```
 1. Get radius using prompt and calculate the area of a circle (area = pi x r x r) and circumference of a circle(c = 2 x pi x r) where pi = 3.14.
 1. Calculate the slope, x-intercept and y-intercept of y = 2x -2
 1. Slope is m = (y<sub>2</sub>-y<sub>1</sub>)/(x<sub>2</sub>-x<sub>1</sub>). Find the slope between point (2, 2) and point(6,10)
