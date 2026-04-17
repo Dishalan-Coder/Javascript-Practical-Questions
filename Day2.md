@@ -49,8 +49,23 @@ console.log(parseInt('9.8') == 10); // false (parseInt('9.8') = 9)
    ```sh
    true
    ```
+   ```js
+   console.log(4 > 3);    // true
+   ```
    2. 4 >= 3
+   ```sh
+   true
+   ```
+   ```js
+   console.log(4 >= 3);  // true
+   ```
    3. 4 < 3
+   ```sh
+   false
+   ```
+   ```js
+   console.log(4 < 3);  // false
+   ```
    4. 4 <= 3
    5. 4 == 4
    6. 4 === 4
