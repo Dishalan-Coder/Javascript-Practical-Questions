@@ -95,33 +95,163 @@ console.log(parseInt('9.8') == 10); // false (parseInt('9.8') = 9)
    console.log(4 != 4);   // false
    ```
    8. 4 !== 4
-   
+   ```
+   false
+   ```
+   ```js
+   console.log(4 !== 4);  // false
+   ```
    9. 4 != '4'
+   ```
+   false
+   ```
+   ```js
+   console.log(4 != '4'); // false
+   ```
    10. 4 == '4'
+   ```
+   true
+   ```
+   ```js
+   console.log(4 == '4'); // true
+   ```
    11. 4 === '4'
+   ```
+   false
+   ```
+   ```js
+   console.log(4 === '4');// false
+   ```
    12. Find the length of python and jargon and make a falsy comparison statement.
+   ```js
+   let word1 = "python";
+   let word2 = "jargon";
+
+   console.log(word1.length); // 6
+   console.log(word2.length); // 6
+
+   console.log(word1.length !== word2.length); // false (falsy comparison)
+   ```
 
 6. Figure out the result of the following expressions first without using console.log(). After you decide the result confirm it by using console.log()
    1. 4 > 3 && 10 < 12
+   ```
+   true
+   ```
+   ```js
+   console.log(4 > 3 && 10 < 12);   // true
+   ```
    2. 4 > 3 && 10 > 12
+   ```
+   false
+   ```
+   ```js
+   console.log(4 > 3 && 10 > 12);   // false
+   ```
    3. 4 > 3 || 10 < 12
+   ```
+   true
+   ```
+   ```js
+   console.log(4 > 3 || 10 < 12);   // true
+   ```
    4. 4 > 3 || 10 > 12
+   ```
+   true
+   ```
+   ```js
+   console.log(4 > 3 || 10 > 12);   // true
+   ```
    5. !(4 > 3)
+   ```
+   false
+   ```
+   ```js
+   console.log(!(4 > 3));           // false
+   ```
    6. !(4 < 3)
+   ```
+   true
+   ```
+   ```js
+   console.log(!(4 < 3));           // true
+   ```
    7. !(false)
+   ```
+   true
+   ```
+   ```js
+   console.log(!(false));           // true
+   ```
    8. !(4 > 3 && 10 < 12)
+   ```
+   false
+   ```
+   ```js
+   console.log(!(4 > 3 && 10 < 12));// false
+   ```
    9. !(4 > 3 && 10 > 12)
+   ```
+   true
+   ```
+   ```js
+   console.log(!(4 > 3 && 10 > 12));// true
+   ```
    10. !(4 === '4')
+   ```
+   true
+   ```
+   ```js
+   console.log(!(4 === '4'));       // true
+   ```
    11. There is no 'on' in both dragon and python
+   ```
+   I can't understand the question
+   ```
 
 7. Use the Date object to do the following activities
    1. What is the year today?
+   ```js
+   const now = new Date();
+   const year = now.getFullYear();
+   console.log(year);
+   ```
    2. What is the month today as a number?
+   ```js
+   const now = new Date();
+   const month = now.getMonth() + 1; // +1 to make it 1–12
+   console.log(month);
+   ```
    3. What is the date today?
+   ```js
+   const now = new Date();
+   const date = now.getDate();
+   console.log("Date:", date);   
+   ```
    4. What is the day today as a number?
+   ```js
+   const now = new Date();
+   const day = now.getDay();
+   console.log("Day:", day);
+   ```
    5. What is the hours now?
+   ```js
+   const now = new Date();
+   const hours = now.getHours();
+   console.log("Hours:", hours);
+   ```
    6. What is the minutes now?
+   ```js
+   const now = new Date();
+   const minutes = now.getMinutes();
+   console.log("Minutes:", minutes);
+   ```
    7. Find out the numbers of seconds elapsed from January 1, 1970 to now.
+   ```js
+   const now = new Date();
+   const secondsSince1970 = Math.floor(now.getTime() / 1000);
+   console.log(secondsSince1970);
+   ```
 
 ### Exercises: Level 2
 
