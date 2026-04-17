@@ -46,31 +46,56 @@ console.log(parseInt('9.8') == 10); // false (parseInt('9.8') = 9)
 
 5. Figure out the result of the following comparison expression first without using console.log(). After you decide the result confirm it using console.log()
    1. 4 > 3
-   ```sh
+   ```
    true
    ```
    ```js
    console.log(4 > 3);    // true
    ```
    2. 4 >= 3
-   ```sh
+   ```
    true
    ```
    ```js
    console.log(4 >= 3);  // true
    ```
    3. 4 < 3
-   ```sh
+   ```
    false
    ```
    ```js
    console.log(4 < 3);  // false
    ```
    4. 4 <= 3
+   ```
+   false
+   ```
+   ```js
+   console.log(4 <= 3);   // false
+   ```
    5. 4 == 4
+   ```
+   true
+   ```
+   ```js
+   console.log(4 == 4);   // true
+   ```
    6. 4 === 4
+   ```
+   true
+   ```
+   ```js
+   console.log(4 === 4);  // true
+   ```
    7. 4 != 4
+   ```
+   false
+   ```
+   ```js
+   console.log(4 != 4);   // false
+   ```
    8. 4 !== 4
+   
    9. 4 != '4'
    10. 4 == '4'
    11. 4 === '4'
