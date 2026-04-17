@@ -4,14 +4,51 @@
 ### Exercises: Level 1
 
 1. Declare firstName, lastName, country, city, age, isMarried, year variable and assign value to it and use the typeof operator to check different data types.
+```js
+let firstName = "Jeyachchanthiran";
+let lastName = "Dishalan";
+let country = "Sri Lanka";
+let city = "Kilinochchi";
+let age = 21;
+let isMarried = false;
+let year = 2026;
+
+console.log(typeof firstName);  // string
+console.log(typeof lastName);   // string
+console.log(typeof country);    // string
+console.log(typeof city);       // string
+console.log(typeof age);        // number
+console.log(typeof isMarried);  // boolean
+console.log(typeof year);       // number
+
+```
 2. Check if type of '10' is equal to 10
+```js
+console.log(typeof '10' == typeof 10); // false (string vs number)
+```
 3. Check if parseInt('9.8') is equal to 10
+```js
+console.log(parseInt('9.8') == 10); // false (parseInt('9.8') = 9)
+```
 4. Boolean value is either true or false.
    1. Write three JavaScript statement which provide truthy value.
+   ```js
+   console.log(1);        // truthy
+   console.log("hello");  // truthy
+   console.log(true);     // truthy
+   ```
    2. Write three JavaScript statement which provide falsy value.
+   ```js
+   console.log(0);        // falsy
+   console.log("");       // falsy
+   console.log(false);    // falsy
+   ```
 
 5. Figure out the result of the following comparison expression first without using console.log(). After you decide the result confirm it using console.log()
    1. 4 > 3
+   ```
+   true
+   ```
    2. 4 >= 3
    3. 4 < 3
    4. 4 <= 3
