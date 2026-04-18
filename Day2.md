@@ -278,7 +278,7 @@ console.log(parseInt('9.8') == 10); // false (parseInt('9.8') = 9)
    console.log(area);
    ```
 
-1. Write a script that prompt the user to enter side a, side b, and side c of the triangle and and calculate the perimeter of triangle (perimeter = a + b + c)
+2. Write a script that prompt the user to enter side a, side b, and side c of the triangle and and calculate the perimeter of triangle (perimeter = a + b + c)
 
    ```sh
    Enter side a: 5
@@ -305,7 +305,7 @@ console.log(parseInt('9.8') == 10); // false (parseInt('9.8') = 9)
 
    ```
 
-1. Get length and width using prompt and calculate an area of rectangle (area = length x width and the perimeter of rectangle (perimeter = 2 x (length + width))
+3. Get length and width using prompt and calculate an area of rectangle (area = length x width and the perimeter of rectangle (perimeter = 2 x (length + width))
 ```js
 let length = prompt("Enter length:");
 let width = prompt("Enter width:");
@@ -322,7 +322,7 @@ let perimeter = 2 * (length + width);
 console.log("Area = " + area);
 console.log("Perimeter = " + perimeter);
 ```
-1. Get radius using prompt and calculate the area of a circle (area = pi x r x r) and circumference of a circle(c = 2 x pi x r) where pi = 3.14.
+4. Get radius using prompt and calculate the area of a circle (area = pi x r x r) and circumference of a circle(c = 2 x pi x r) where pi = 3.14.
 ```js
 let radius = prompt("Enter the radius of the circle:");
 radius = Number(radius);
@@ -335,7 +335,7 @@ let circumference = 2 * pi * radius;
 console.log("Area = " + area);      
 console.log("Circumference = " + circumference);
 ```
-1. Calculate the slope, x-intercept and y-intercept of y = 2x -2
+5. Calculate the slope, x-intercept and y-intercept of y = 2x -2
 ```js
 let m = 2; // slope
 console.log("Slope = " + m);     //Slope = 2
@@ -353,7 +353,7 @@ let c = -2;
 console.log( "x = " + (y-(m*x+c)));       //x = 2
 
 ```
-1. Slope is m = (y<sub>2</sub>-y<sub>1</sub>)/(x<sub>2</sub>-x<sub>1</sub>). Find the slope between point (2, 2) and point(6,10)
+6. Slope is m = (y<sub>2</sub>-y<sub>1</sub>)/(x<sub>2</sub>-x<sub>1</sub>). Find the slope between point (2, 2) and point(6,10)
 ```js
 let x1 = 2, y1 = 2;
 let x2 = 6, y2 = 10;
@@ -361,7 +361,7 @@ let x2 = 6, y2 = 10;
 let slope = (y2 - y1) / (x2 - x1);
 console.log("Slope = " + slope);           //Slope = 2
 ```
-1. Compare the slope of above two questions.
+7. Compare the slope of above two questions.
 ```js
 let slope1 = 2;
 let slope2 = 2;
@@ -372,7 +372,7 @@ if (slope1 === slope2) {
     console.log("Slopes are different");
 }
 ```
-1. Calculate the value of y (y = x<sup>2</sup> + 6x + 9). Try to use different x values and figure out at what x value y is 0.
+8. Calculate the value of y (y = x<sup>2</sup> + 6x + 9). Try to use different x values and figure out at what x value y is 0.
 ```js
 for (let x = -5; x <= 1; x++) {
     let y = x * x + 6 * x + 9;
@@ -382,7 +382,7 @@ for (let x = -5; x <= 1; x++) {
     }
 }
 ```
-1. Writ a script that prompt a user to enter hours and rate per hour. Calculate pay of the person?
+9. Writ a script that prompt a user to enter hours and rate per hour. Calculate pay of the person?
 
     ```sh
     Enter hours: 40
@@ -401,7 +401,7 @@ let pay = hours * rate;
 console.log("Your weekly earning is " + pay);
 ```
 
-1. If the length of your name is greater than 7 say, your name is long else say your name is short.
+10. If the length of your name is greater than 7 say, your name is long else say your name is short.
 ```js
 // Get user's name
 let name = prompt("Enter your name:");
@@ -413,7 +413,7 @@ if (name.length > 7) {
     console.log("Your name is short");
 }
 ```
-1. Compare your first name length and your family name length and you should get this output.
+11. Compare your first name length and your family name length and you should get this output.
 
     ```js
     let firstName = 'kamal'
@@ -437,7 +437,7 @@ if (firstName.length > familyName.length) {
 }
 ```
 
-1. Declare two variables _myAge_ and _yourAge_ and assign them initial values and myAge and yourAge.
+12. Declare two variables _myAge_ and _yourAge_ and assign them initial values and myAge and yourAge.
 
    ```js
    let myAge = 25
@@ -453,7 +453,7 @@ let yourAge = 15;
 let difference = myAge - yourAge;
 console.log(`I am ${difference} years older than you.`);  //I am 6 years older than you.
 ```
-1. Using prompt get the year the user was born and if the user is 18 or above allow the user to drive if not tell the user to wait a certain amount of years.
+13. Using prompt get the year the user was born and if the user is 18 or above allow the user to drive if not tell the user to wait a certain amount of years.
 
     ```sh
 
@@ -486,7 +486,7 @@ if (age >= 18) {
 }
 ```
 
-1. Write a script that prompt the user to enter number of years. Calculate the number of seconds a person can live. Assume some one lives just hundred years
+14. Write a script that prompt the user to enter number of years. Calculate the number of seconds a person can live. Assume some one lives just hundred years
 
    ```sh
    Enter number of years you live: 100
@@ -508,7 +508,7 @@ let secondsLived = years * secondsInYear;
 // Display result
 console.log(`You lived ${secondsLived} seconds.`);
 ```
-1. Create a human readable time format using the Date time object
+15. Create a human readable time format using the Date time object
 ```js
 // Get current date and time
 let now = new Date();
@@ -587,7 +587,7 @@ let minutes = String(now.getMinutes()).padStart(2, '0');
    }
    ```
 
-1. Compare the values of myAge and yourAge using if … else. Based on the comparison and log the result to console stating who is older (me or you). Use prompt(“Enter your age:”) to get the age as input.
+2. Compare the values of myAge and yourAge using if … else. Based on the comparison and log the result to console stating who is older (me or you). Use prompt(“Enter your age:”) to get the age as input.
 
    ```sh
    Enter your age: 30
@@ -613,7 +613,7 @@ let minutes = String(now.getMinutes()).padStart(2, '0');
    }
    ```
 
-1. If a is greater than b return 'a is greater than b' else 'a is less than b'. Try to implement it in to ways
+3. If a is greater than b return 'a is greater than b' else 'a is less than b'. Try to implement it in to ways
 
     - using if else
     - ternary operator.
@@ -647,7 +647,7 @@ let minutes = String(now.getMinutes()).padStart(2, '0');
    console.log(result);    //4 is greater than 3
     ```
 
-1. Even numbers are divisible by 2 and the remainder is zero. How do you check, if a number is even or not using JavaScript?
+4. Even numbers are divisible by 2 and the remainder is zero. How do you check, if a number is even or not using JavaScript?
 
     ```sh
     Enter a number: 2
@@ -717,7 +717,7 @@ let minutes = String(now.getMinutes()).padStart(2, '0');
    console.log(`Your grade is ${grade}`);
 
    ```
-1. Check if the season is Autumn, Winter, Spring or Summer.
+2. Check if the season is Autumn, Winter, Spring or Summer.
    If the user input is :
    - September, October or November, the season is Autumn.
    - December, January or February, the season is Winter.
@@ -764,7 +764,7 @@ let minutes = String(now.getMinutes()).padStart(2, '0');
    console.log(`The season is ${season}`);
 
    ```
-1. Check if a day is weekend day or a working day. Your script will take day as an input.
+3. Check if a day is weekend day or a working day. Your script will take day as an input.
 
 ```sh
     What is the day  today? Saturday
@@ -877,7 +877,7 @@ let minutes = String(now.getMinutes()).padStart(2, '0');
 
   ```
 
-1. Write a program which tells the number of days in a month, now consider leap year.
+2. Write a program which tells the number of days in a month, now consider leap year.
 ```js
 // Get month input
 let month = prompt("Enter a month:");
