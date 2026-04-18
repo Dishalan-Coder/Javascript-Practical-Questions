@@ -492,17 +492,71 @@ if (age >= 18) {
    Enter number of years you live: 100
    You lived 3153600000 seconds.
    ```
+```js
+// Get number of years from user
+let years = prompt("Enter number of years you live:");
 
+// Convert to number
+years = Number(years);
+
+// Calculate seconds in one year
+let secondsInYear = 365 * 24 * 60 * 60;
+
+// Calculate total seconds lived
+let secondsLived = years * secondsInYear;
+
+// Display result
+console.log(`You lived ${secondsLived} seconds.`);
+```
 1. Create a human readable time format using the Date time object
+```js
+// Get current date and time
+let now = new Date();
+
+// Extract values
+let year = now.getFullYear();
+let month = String(now.getMonth() + 1).padStart(2, '0');
+let date = String(now.getDate()).padStart(2, '0');
+let hours = String(now.getHours()).padStart(2, '0');
+let minutes = String(now.getMinutes()).padStart(2, '0');
+```
    1. YYYY-MM-DD HH:mm
+   ```js
+   let format1 = `${year}-${month}-${date} ${hours}:${minutes}`;
+   console.log(format1);
+   ```
    2. DD-MM-YYYY HH:mm
+   ```js
+   let format2 = `${date}-${month}-${year} ${hours}:${minutes}`;
+   console.log(format2);
+   ```
    3. DD/MM/YYYY HH:mm
+   ```js
+   let format3 = `${date}/${month}/${year} ${hours}:${minutes}`;
+   console.log(format3);
+   ```
 
 ### Exercises: Level 3
 
 1. Create a human readable time format using the Date time object. The hour and the minute should be all the time two digits(7 hours should be 07 and 5 minutes should be 05 )
    1. YYY-MM-DD HH:mm eg. 20120-01-02 07:05
+   ```js
+   // Get current date and time
+   let now = new Date();
 
+   // Extract values
+   let year = now.getFullYear();
+   let month = String(now.getMonth() + 1).padStart(2, '0');
+   let date = String(now.getDate()).padStart(2, '0');
+   let hours = String(now.getHours()).padStart(2, '0');
+   let minutes = String(now.getMinutes()).padStart(2, '0');
+
+   // Format: YYYY-MM-DD HH:mm
+   let formattedTime = `${year}-${month}-${date} ${hours}:${minutes}`;
+
+   // Display result
+   console.log(formattedTime);
+   ```
 
 
    
@@ -517,12 +571,46 @@ if (age >= 18) {
    Enter your age:15
    You are left with 3 years to drive.
    ```
+   ```js
+   // Get user input
+   let age = prompt("Enter your age:");
+
+   // Convert to number
+   age = Number(age);
+
+   // Check condition
+   if (age >= 18) {
+      console.log("You are old enough to drive.");
+   } else {
+      let yearsLeft = 18 - age;
+      console.log(`You are left with ${yearsLeft} years to drive.`);
+   }
+   ```
 
 1. Compare the values of myAge and yourAge using if … else. Based on the comparison and log the result to console stating who is older (me or you). Use prompt(“Enter your age:”) to get the age as input.
 
    ```sh
    Enter your age: 30
    You are 5 years older than me.
+   ```
+   ```js
+   // My age (fixed value)
+   let myAge = 21;
+
+   // Get user's age
+   let yourAge = prompt("Enter your age:");
+   yourAge = Number(yourAge);
+
+   // Compare ages
+   if (yourAge > myAge) {
+      let diff = yourAge - myAge;
+      console.log(`You are ${diff} years older than me.`);
+   } else if (yourAge < myAge) {
+      let diff = myAge - yourAge;
+      console.log(`I am ${diff} years older than you.`);
+   } else {
+      console.log("We are the same age.");
+   }
    ```
 
 1. If a is greater than b return 'a is greater than b' else 'a is less than b'. Try to implement it in to ways
@@ -538,6 +626,26 @@ if (age >= 18) {
     ```sh
       4 is greater than 3
     ```
+    ```js
+    //if ...else
+   let a = 4;
+   let b = 3;
+
+   if (a > b) {
+      console.log(`${a} is greater than ${b}`);       //4 is greater than 3
+   } else {
+      console.log(`${a} is less than ${b}`);
+   }
+    ```
+    ```js
+   //ternary
+   let a = 4;
+   let b = 3;
+
+   let result = (a > b) ? `${a} is greater than ${b}` : `${a} is less than ${b}`;
+
+   console.log(result);    //4 is greater than 3
+    ```
 
 1. Even numbers are divisible by 2 and the remainder is zero. How do you check, if a number is even or not using JavaScript?
 
@@ -548,6 +656,20 @@ if (age >= 18) {
     Enter a number: 9
     9 is is an odd number.
     ```
+    ```js
+   // Get input from user
+   let number = prompt("Enter a number:");
+
+   // Convert to number
+   number = Number(number);
+
+   // Check even or odd
+   if (number % 2 === 0) {
+      console.log(`${number} is an even number`);
+   } else {
+      console.log(`${number} is an odd number`);
+   }
+    ```
 
 ### Exercises: Level 5
 
@@ -557,12 +679,91 @@ if (age >= 18) {
    - 60-69, C
    - 50-59, D
    - 0-49, F
+   ```js
+   // Get score from user
+   let score = prompt("Enter your score:");
+
+   // Convert to number
+   score = Number(score);
+
+   // Use switch(true) trick for range checking
+   let grade;
+
+   switch (true) {
+      case (score >= 80 && score <= 100):
+         grade = "A";
+         break;
+
+      case (score >= 70 && score <= 79):
+         grade = "B";
+         break;
+
+      case (score >= 60 && score <= 69):
+         grade = "C";
+         break;
+
+      case (score >= 50 && score <= 59):
+         grade = "D";
+         break;
+
+      case (score >= 0 && score <= 49):
+         grade = "F";
+         break;
+
+      default:
+         grade = "Invalid score";
+   }
+
+   console.log(`Your grade is ${grade}`);
+
+   ```
 1. Check if the season is Autumn, Winter, Spring or Summer.
    If the user input is :
    - September, October or November, the season is Autumn.
    - December, January or February, the season is Winter.
    - March, April or May, the season is Spring
    - June, July or August, the season is Summer
+   ```js
+   // Get month input from user
+   let month = prompt("Enter a month:");
+
+   // Convert to lowercase for consistency
+   month = month.toLowerCase();
+
+   let season;
+
+   switch (month) {
+      case "september":
+      case "october":
+      case "november":
+         season = "Autumn";
+         break;
+
+      case "december":
+      case "january":
+      case "february":
+         season = "Winter";
+         break;
+
+      case "march":
+      case "april":
+      case "may":
+         season = "Spring";
+         break;
+
+      case "june":
+      case "july":
+      case "august":
+         season = "Summer";
+         break;
+
+      default:
+         season = "Invalid month";
+   }
+
+   console.log(`The season is ${season}`);
+
+   ```
 1. Check if a day is weekend day or a working day. Your script will take day as an input.
 
 ```sh
@@ -577,7 +778,40 @@ if (age >= 18) {
 
     What is the day today? FrIDAy
     Friday is a working day.
-  ```
+```
+   ```js
+   // Get day input from user
+   let day = prompt("What is the day today?");
+
+   // Normalize input (fix case issues like saturDaY)
+   day = day.toLowerCase();
+
+   // Capitalize first letter for output
+   let formattedDay = day.charAt(0).toUpperCase() + day.slice(1);
+
+   let result;
+
+   switch (day) {
+      case "saturday":
+      case "sunday":
+         result = `${formattedDay} is a weekend.`;
+         break;
+
+      case "monday":
+      case "tuesday":
+      case "wednesday":
+      case "thursday":
+      case "friday":
+         result = `${formattedDay} is a working day.`;
+         break;
+
+      default:
+         result = "Invalid day entered.";
+   }
+
+   console.log(result);
+
+   ```
 
 ### Exercises: Level 6
 
@@ -596,5 +830,102 @@ if (age >= 18) {
     Enter a month: FEbruary
     February has 28 days.
   ```
+  ```js
+   // Get month input
+   let month = prompt("Enter a month:");
+
+   // Normalize input
+   month = month.toLowerCase();
+
+   // Format month for output (capitalize first letter)
+   let formattedMonth = month.charAt(0).toUpperCase() + month.slice(1);
+
+   let days;
+
+   switch (month) {
+      case "january":
+      case "march":
+      case "may":
+      case "july":
+      case "august":
+      case "october":
+      case "december":
+         days = 31;
+         break;
+
+      case "april":
+      case "june":
+      case "september":
+      case "november":
+         days = 30;
+         break;
+
+      case "february":
+         days = 28;
+         break;
+
+      default:
+         days = null;
+   }
+
+   // Output result
+   if (days) {
+      console.log(`${formattedMonth} has ${days} days.`);
+   } else {
+      console.log("Invalid month entered.");
+   }
+
+  ```
 
 1. Write a program which tells the number of days in a month, now consider leap year.
+```js
+// Get month input
+let month = prompt("Enter a month:");
+
+// Get year input (needed for leap year check)
+let year = Number(prompt("Enter a year:"));
+
+// Normalize input
+month = month.toLowerCase();
+
+// Format month for output
+let formattedMonth = month.charAt(0).toUpperCase() + month.slice(1);
+
+let days;
+
+// Check leap year
+let isLeapYear = (year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0);
+
+switch (month) {
+    case "january":
+    case "march":
+    case "may":
+    case "july":
+    case "august":
+    case "october":
+    case "december":
+        days = 31;
+        break;
+
+    case "april":
+    case "june":
+    case "september":
+    case "november":
+        days = 30;
+        break;
+
+    case "february":
+        days = isLeapYear ? 29 : 28;
+        break;
+
+    default:
+        days = null;
+}
+
+// Output result
+if (days) {
+    console.log(`${formattedMonth} has ${days} days.`);
+} else {
+    console.log("Invalid month entered.");
+}
+```
