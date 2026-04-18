@@ -323,10 +323,65 @@ console.log("Area = " + area);
 console.log("Perimeter = " + perimeter);
 ```
 1. Get radius using prompt and calculate the area of a circle (area = pi x r x r) and circumference of a circle(c = 2 x pi x r) where pi = 3.14.
+```js
+let radius = prompt("Enter the radius of the circle:");
+radius = Number(radius);
+
+const pi = 22/7;
+
+let area = pi * radius * radius;
+let circumference = 2 * pi * radius;
+
+console.log("Area = " + area);      
+console.log("Circumference = " + circumference);
+```
 1. Calculate the slope, x-intercept and y-intercept of y = 2x -2
+```js
+let m = 2; // slope
+console.log("Slope = " + m);     //Slope = 2
+
+// y-intercept (when x = 0)
+let x = 0;
+let m = 2;
+let c = -2;
+console.log( "y = " + (m*x+c));           //y = -2                     
+
+// x-intercept (when y = 0)
+let y = 0;
+let m = 2;
+let c = -2;
+console.log( "x = " + (y-(m*x+c)));       //x = 2
+
+```
 1. Slope is m = (y<sub>2</sub>-y<sub>1</sub>)/(x<sub>2</sub>-x<sub>1</sub>). Find the slope between point (2, 2) and point(6,10)
+```js
+let x1 = 2, y1 = 2;
+let x2 = 6, y2 = 10;
+
+let slope = (y2 - y1) / (x2 - x1);
+console.log("Slope = " + slope);           //Slope = 2
+```
 1. Compare the slope of above two questions.
+```js
+let slope1 = 2;
+let slope2 = 2;
+
+if (slope1 === slope2) {
+    console.log("Both slopes are equal");    //Both slopes are equal
+} else {
+    console.log("Slopes are different");
+}
+```
 1. Calculate the value of y (y = x<sup>2</sup> + 6x + 9). Try to use different x values and figure out at what x value y is 0.
+```js
+for (let x = -5; x <= 1; x++) {
+    let y = x * x + 6 * x + 9;
+
+    if (y === 0) {
+        console.log("y is 0 when x = ", x);         //y is 0 when x = -3
+    }
+}
+```
 1. Writ a script that prompt a user to enter hours and rate per hour. Calculate pay of the person?
 
     ```sh
@@ -334,8 +389,30 @@ console.log("Perimeter = " + perimeter);
     Enter rate per hour: 28
     Your weekly earning is 1120
     ```
+```js
+let hours = prompt("Enter hours:");
+let rate = prompt("Enter rate per hour:");
+
+hours = Number(hours);
+rate = Number(rate);
+
+let pay = hours * rate;
+
+console.log("Your weekly earning is " + pay);
+```
 
 1. If the length of your name is greater than 7 say, your name is long else say your name is short.
+```js
+// Get user's name
+let name = prompt("Enter your name:");
+
+// Check length
+if (name.length > 7) {
+    console.log("Your name is long");
+} else {
+    console.log("Your name is short");
+}
+```
 1. Compare your first name length and your family name length and you should get this output.
 
     ```js
@@ -347,6 +424,19 @@ console.log("Perimeter = " + perimeter);
     Your first name, kamal is longer than your family name, ranvir
     ```
 
+```js
+let firstName = prompt("Enter your first name");
+let familyName = prompt("Enter your family name");
+
+if (firstName.length > familyName.length) {
+    console.log(`Your first name, ${firstName} is longer than your family name, ${familyName}`);
+} else if (firstName.length < familyName.length) {
+    console.log(`Your family name, ${familyName} is longer than your first name, ${firstName}`);
+} else {
+    console.log(`Your first name and family name are of equal length`);
+}
+```
+
 1. Declare two variables _myAge_ and _yourAge_ and assign them initial values and myAge and yourAge.
 
    ```js
@@ -357,7 +447,12 @@ console.log("Perimeter = " + perimeter);
    ```sh
    I am 50 years older than you.
    ```
-
+```js
+let myAge = 21;
+let yourAge = 15;
+let difference = myAge - yourAge;
+console.log(`I am ${difference} years older than you.`);  //I am 6 years older than you.
+```
 1. Using prompt get the year the user was born and if the user is 18 or above allow the user to drive if not tell the user to wait a certain amount of years.
 
     ```sh
@@ -368,6 +463,28 @@ console.log("Perimeter = " + perimeter);
     Enter birth year: 2005
     You are 15. You will be allowed to drive after 3 years.
     ```
+
+```js
+// Get birth year from user
+let birthYear = prompt("Enter birth year:");
+
+// Convert to number
+birthYear = Number(birthYear);
+
+// Get current year
+let currentYear = new Date().getFullYear();
+
+// Calculate age
+let age = currentYear - birthYear;
+
+// Check eligibility
+if (age >= 18) {
+    console.log(`You are ${age}. You are old enough to drive`);
+} else {
+    let yearsLeft = 18 - age;
+    console.log(`You are ${age}. You will be allowed to drive after ${yearsLeft} years.`);
+}
+```
 
 1. Write a script that prompt the user to enter number of years. Calculate the number of seconds a person can live. Assume some one lives just hundred years
 
